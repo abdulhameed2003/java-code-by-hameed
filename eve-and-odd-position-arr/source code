@@ -1,0 +1,31 @@
+import java.util.*;
+public class main{
+public static void main (String[] args) {
+  Scanner sc=new Scanner(System.in);
+  int n=sc.nextInt();
+  int n1=0,n2=0;
+  if(n%2==0)
+  {
+    n1=n/2;n2=n-n1;
+  }
+  int a1[]=new int[n1];
+  int a2[]=new int[n2];
+  int j=0,k=0;
+  for(int i=0;i<n;i++)
+  {
+    int t=sc.nextInt();
+    if(i%2==0)
+    {
+      a1[j+1]=t;
+    }
+    else
+    {
+      a2[k++]=t;
+    }
+  }
+  Arrays.sort(a1);
+  Arrays.sort(a2);
+  System.out.println(a1[a1.length-2]+a2[1]);
+  
+  }
+}
